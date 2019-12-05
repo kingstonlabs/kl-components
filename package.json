@@ -1,8 +1,8 @@
 {
   "name": "kl-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Library of React Components by Kingston Labs",
-  "main": "n/a",
+  "main": "index.js",
   "scripts": {
     "test": "jest",
     "start": "webpack-dev-server --mode development --config webpack.dev.js",
