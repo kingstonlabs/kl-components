@@ -1,6 +1,6 @@
 {
   "name": "kl-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Library of React Components by Kingston Labs",
   "main": "n/a",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/kingstonlabs/kl-components.git"
+    "url": "git+ssh://github.com/kingstonlabs/kl-components.git"
   },
   "keywords": [
     "react",
