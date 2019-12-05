@@ -1,0 +1,10 @@
+.post-social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .SocialMediaShareButton {
+        margin: 5px;
+        cursor: pointer;
+    }
+}

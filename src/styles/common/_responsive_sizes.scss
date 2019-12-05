@@ -1,0 +1,14 @@
+$mobile-width-min: 320px;
+$tablet-width-min: 580px;
+$desktop-width-min: 800px;
+$desktop-width: 1170px;
+$large-width-min: 1400px;
+
+$screen-tablet: "screen and (min-width: "$tablet-width-min")";
+$screen-desktop: "screen and (min-width: "$desktop-width-min")";
+$screen-desktop-full: "screen and (min-width: "$desktop-width")";
+$screen-large: "screen and (min-width: "$large-width-min")";
+
+// Height based media queries required for wide aspect ratios
+$short-height: 800px;
+$screen-short: "screen and (max-height: "$short-height")";

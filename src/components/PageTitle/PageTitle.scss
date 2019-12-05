@@ -1,0 +1,10 @@
+@import "../../styles/common/responsive_sizes";
+
+.page-title {
+    margin: 30px auto 0;
+    max-width: $desktop-width-normal;
+
+    @media #{$screen-desktop} {
+        margin: 60px auto 0;
+    }
+}

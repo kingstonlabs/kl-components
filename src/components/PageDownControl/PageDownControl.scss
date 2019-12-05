@@ -1,0 +1,67 @@
+@import "../../styles/common/index";
+
+
+$page-down-icon-width: 30px;
+$page-down-icon-height: 18px;
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-15px)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+
+.page-down-control {
+    position: relative;
+    margin-top: 50px;
+    height: 33px;
+    z-index: 10;
+    animation: bounce 2s infinite;
+
+    @media #{$screen-desktop} {
+        margin-top: 60px;
+        height: 51px;
+    }
+
+    @media print {
+        display: none;
+    }
+}
+
+
+.page-down-control__button {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - #{$page-down-icon-width / 2});
+    height: $page-down-icon-height;
+    width: $page-down-icon-width;
+    padding: 20px 10px;
+    cursor: pointer;
+
+    // Remove outline for aesthetic reasons, although this is considered
+    // an accessibility feature
+    &:focus, &:active {
+        outline: 0;
+    }
+    &::-moz-focus-inner {
+        border: initial;
+    }
+
+}
+
+
+.page-down-control__icon {
+    position: absolute;
+    height: $page-down-icon-height;
+    width: $page-down-icon-width;
+    bottom: 15px;
+}

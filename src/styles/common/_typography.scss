@@ -1,0 +1,45 @@
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$font-size-title: 1.25rem;
+$font-size-content: 0.875rem;
+$font-size-smallprint: 0.75rem;
+
+$font-family-roboto: "Roboto", sans-serif;
+$font-family-brandon-grotesque: "brandon-grotesque", sans-serif;
+$font-family-peloton-icons: "peloton-icons";
+
+
+@font-face {
+  font-family: "peloton-icons";
+  src: url("../fonts/peloton-icons/peloton-icons.eot");
+  src: url("../fonts/peloton-icons/peloton-icons.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/peloton-icons/peloton-icons.woff") format("woff"),
+       url("../fonts/peloton-icons/peloton-icons.ttf") format("truetype"),
+       url("../fonts/peloton-icons/peloton-icons.svg#peloton-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "brandon-grotesque";
+  src: url("../fonts/brandon-grotesque/700.woff2") format("woff2"),
+       url("../fonts/brandon-grotesque/700.woff") format("woff"),
+       url("../fonts/brandon-grotesque/700.opentype") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "brandon-grotesque";
+  src: url("../fonts/brandon-grotesque/300.woff2") format("woff2"),
+       url("../fonts/brandon-grotesque/300.woff") format("woff"),
+       url("../fonts/brandon-grotesque/300.opentype") format("opentype");
+  font-style: normal;
+  font-weight: 300;
+}
+

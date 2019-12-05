@@ -1,0 +1,85 @@
+@import "../../styles/common/colors";
+@import "../../styles/common/responsive_sizes";
+
+
+.contact-form {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    padding: 20px 0;
+
+    @media #{$screen-tablet} {
+        padding: 40px 0;
+    }
+
+    @media #{$screen-desktop} {
+        padding: 60px 0;
+    }
+}
+
+.contact-form--dark {
+    background-color: $color-metal;
+    color: $color-white;
+}
+
+.contact-form--pink {
+    background-color: $color-rose;
+    color: $color-white;
+}
+
+.contact-form--turquoise {
+    background-color: $color-cerulean;
+    color: $color-white;
+
+    .button {
+        background-color: $color-rose;
+    }
+}
+
+.contact-form__content {
+    margin: 0 auto;
+    max-width: $desktop-width-normal;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-form__text {
+    flex: 1 1 100%;
+
+    @media #{$screen-desktop} {
+        flex: 1 1 50%;
+    }
+}
+
+.contact-form__text-inner {
+    padding: 20px 30px 0;
+    box-sizing: border-box;
+
+    @media #{$screen-desktop} {
+        padding: 40px;
+    }
+}
+
+.contact-form__form {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+
+    @media #{$screen-desktop} {
+        flex: 1 1 50%;
+    }
+}
+
+.contact-form__form-inner {
+    padding: 0 30px 30px;
+    box-sizing: border-box;
+    width: 100%;
+
+    @media #{$screen-desktop} {
+        padding: 80px 40px 40px;
+    }
+}

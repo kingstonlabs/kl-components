@@ -1,0 +1,38 @@
+{
+  "name": "kl-components",
+  "version": "1.0.0",
+  "description": "Library of React Components by Kingston Labs",
+  "main": "n/a",
+  "scripts": {
+    "test": "jest",
+    "start": "webpack-dev-server --mode development --config webpack.dev.js",
+    "build": "webpack --mode production --config webpack.build.js",
+    "lint": "eslint --ext .jsx --ext .js \"$@\" src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/kingstonlabs/kl-components.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-component",
+    "components",
+    "jsx",
+    "toolkit"
+  ],
+  "author": "Kingston Labs",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "jest": "^24.9.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "dependencies": {
+    "@tweenjs/tween.js": "^18.4.2"
+  }
+}

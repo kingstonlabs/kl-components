@@ -1,0 +1,63 @@
+@import "../../styles/common/colors";
+@import "../../styles/common/responsive_sizes";
+
+
+.columns {
+    width: 100%;
+    padding: 30px 0;
+    box-sizing: border-box;
+    position: relative;
+
+    @media #{$screen-tablet} {
+        padding: 40px 0;
+    }
+
+    @media #{$screen-desktop} {
+        padding: 60px 0;
+    }
+}
+
+.columns--dark {
+    background: $color-metal;
+    color: $color-white;
+}
+
+.columns--pink {
+    background: $color-rose;
+    color: $color-white;
+}
+
+.columns--turquoise {
+    background: $color-cerulean;
+    color: $color-white;
+}
+
+.columns__header {
+    margin: 0 auto;
+    max-width: $desktop-width-normal;
+    box-sizing: border-box;
+    padding: 10px 30px 20px;
+
+    @media #{$screen-desktop} {
+        padding: 10px 40px 20px;
+    }
+}
+
+.columns__content {
+    margin: 0 auto;
+    max-width: $desktop-width-normal;
+    box-sizing: border-box;
+    padding: 0 30px 20px;
+
+    column-gap: 40px;
+    column-count: 3;
+    column-width: #{$desktop-width-normal / 3 - 80};
+
+    @media #{$screen-desktop} {
+        padding: 0 40px 20px;
+    }
+
+    p {
+        break-inside: avoid;
+    }
+}

@@ -1,0 +1,110 @@
+@import "../../styles/common/colors";
+@import "../../styles/common/responsive_sizes";
+
+
+.grid {
+    width: 100%;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+
+    @media #{$screen-desktop} {
+        padding: 60px 0;
+    }
+}
+
+.grid--dark {
+    background: $color-metal;
+    color: $color-white;
+}
+
+.grid__header {
+    margin: 0 auto;
+    max-width: $desktop-width-normal;
+}
+
+.grid__content {
+    margin: 0 auto;
+    max-width: $desktop-width-normal;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.grid-segment {
+    margin: 40px auto;
+    box-sizing: border-box;
+    z-index: 1;
+
+    @media #{$screen-tablet} {
+        margin: 60px auto;
+    }
+}
+
+.grid-segment--third {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media #{$screen-tablet} {
+        flex: 0 1 #{($desktop-width-normal - 20)/ 3};
+    }
+}
+
+.grid-segment__content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 10px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media #{$screen-tablet} {
+        padding: 10px 30px;
+    }
+}
+
+.grid-segment__image {
+    box-sizing: border-box;
+}
+
+.grid-segment__image--default {
+    padding: 0 80px 40px;
+
+    @media #{$screen-tablet} {
+        padding: 0 60px 40px;
+    }
+}
+
+.grid-segment__image--photo {
+    padding: 20px 0;
+
+    @media #{$screen-desktop} {
+        padding: 40px 0;
+    }
+}
+
+.grid-segment__link {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media #{$screen-desktop} {
+        padding: 0 40px;
+    }
+}
+
+.grid-segment__footer {
+    align-self: flex-end;
+    padding: 0 20px;
+    width: 100%;
+
+    @media #{$screen-desktop} {
+        padding: 0 30px;
+    }
+}

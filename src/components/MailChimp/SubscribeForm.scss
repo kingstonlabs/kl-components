@@ -1,0 +1,14 @@
+@import "../../styles/common/typography";
+
+.subscribe-form {
+    margin: 20px 0;
+}
+
+.subscribe-form__success {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.subscribe-form__caption {
+    max-width: 500px;
+}

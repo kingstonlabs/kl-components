@@ -1,0 +1,42 @@
+@import "../../styles/common/config";
+@import "../../styles/common/house_styles";
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/*
+* Fix gatsby wrappers and default styles.
+*/
+#gatsby-noscript {
+    display: none;
+}
+
+// Fix for reach router used by gatsby
+// See: https://github.com/reach/router/issues/63#issuecomment-428050999
+div[role="group"][tabindex] {
+    flex: 1;
+    height: 100%;
+}
+
+#___gatsby {
+    height: 100%;
+}
+/*
+* Finish gatsby fixes
+*/
+
+
+.layout {
+    @include style-body();
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    margin-top: $navbar-height;
+}

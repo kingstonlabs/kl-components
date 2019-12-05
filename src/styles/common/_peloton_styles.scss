@@ -1,0 +1,222 @@
+@import "responsive_sizes";
+@import "typography";
+
+
+/*
+* Styles provided in Peloton Brand Guidleines
+*/
+
+// Heading styles
+// Brandon Headings (hb)
+@mixin peloton-style-hb-base() {
+    font-family: $font-family-brandon-grotesque;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+@mixin peloton-style-hb1() {
+    @include peloton-style-hb-base();
+    font-size: 28px;
+    line-height: 1.25;
+
+    @media #{$screen-tablet} {
+        font-size: 40px;
+        line-height: 1.125;
+    }
+    @media #{$screen-desktop} {
+        font-size: 48px;
+    }
+}
+
+
+@mixin peloton-style-hb2() {
+    @include peloton-style-hb-base();
+    font-size: 22px;
+    line-height: 1.375;
+
+    @media #{$screen-tablet} {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+    @media #{$screen-desktop} {
+        font-size: 32px;
+    }
+}
+
+
+@mixin peloton-style-hb2-light() {
+    @include peloton-style-hb2();
+    font-weight: $font-weight-light;
+}
+
+
+@mixin peloton-style-hb3() {
+    @include peloton-style-hb-base();
+    font-size: 18px;
+    line-height: 1.375;
+
+    @media #{$screen-tablet} {
+        font-size: 24px;
+    }
+}
+
+
+@mixin peloton-style-hb4() {
+    @include peloton-style-hb-base();
+    font-size: 18px;
+    line-height: 1.375;
+
+    @media #{$screen-tablet} {
+        font-size: 20px;
+    }
+}
+
+
+@mixin peloton-style-hb5() {
+    @include peloton-style-hb-base();
+    font-size: 16px;
+    line-height: 1.375;
+}
+
+
+@mixin peloton-style-hb6() {
+    @include peloton-style-hb-base();
+    font-size: 14px;
+    line-height: 1.375;
+}
+
+
+@mixin peloton-style-hb7() {
+    @include peloton-style-hb-base();
+    font-size: 13px;
+    line-height: 1.375;
+}
+
+
+// Roboto Headings (hr)
+@mixin peloton-style-hr-base() {
+    font-family: $font-family-roboto;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+
+@mixin peloton-style-hr1() {
+    @include peloton-style-hr-base();
+    font-size: 36px;
+    line-height: 1.375;
+
+    @media #{$screen-tablet} {
+        font-size: 56px;
+        line-height: 1.1875;
+    }
+    @media #{$screen-desktop} {
+        font-size: 64px;
+    }
+}
+
+
+@mixin peloton-style-hr2() {
+    @include peloton-style-hr-base();
+    font-size: 28px;
+    line-height: 1.375;
+
+    @media #{$screen-tablet} {
+        font-size: 40px;
+        line-height: 1.25;
+    }
+    @media #{$screen-desktop} {
+        font-size: 44px;
+    }
+}
+
+
+@mixin peloton-style-hr3() {
+    @include peloton-style-hr-base();
+    font-size: 24px;
+    line-height: 1.375;
+
+    @media #{$screen-tablet} {
+        font-size: 32px;
+    }
+    @media #{$screen-desktop} {
+        font-size: 36px;
+    }
+}
+
+
+@mixin peloton-style-hr4() {
+    @include peloton-style-hr-base();
+    font-size: 20px;
+    line-height: 1.375;
+
+    @media #{$screen-tablet} {
+        font-size: 28px;
+    }
+}
+
+
+// Body styles (b)
+@mixin peloton-style-b-base() {
+    font-family: $font-family-roboto;
+    font-weight: $font-weight-light;
+    letter-spacing: 0.025em;
+    text-transform: none;
+}
+
+
+@mixin peloton-style-b1() {
+    @include peloton-style-b-base();
+    font-size: 18px;
+    line-height: 1.5;
+
+    @media #{$screen-tablet} {
+        font-size: 24px;
+        line-height: 1.75;
+    }
+}
+
+
+@mixin peloton-style-b2() {
+    @include peloton-style-b-base();
+    font-size: 16px;
+    line-height: 1.5;
+
+    @media #{$screen-tablet} {
+        font-size: 18px;
+    }
+}
+
+
+@mixin peloton-style-b3() {
+    @include peloton-style-b-base();
+    font-size: 14px;
+    line-height: 1.5;
+
+    @media #{$screen-tablet} {
+        font-size: 16px;
+    }
+}
+
+
+@mixin peloton-style-b4() {
+    @include peloton-style-b-base();
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+@mixin peloton-style-b5() {
+    @include peloton-style-b-base();
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+@mixin peloton-style-b6() {
+    @include peloton-style-b-base();
+    font-size: 12px;
+    line-height: 1.5;
+}

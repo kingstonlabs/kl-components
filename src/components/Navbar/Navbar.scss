@@ -1,0 +1,331 @@
+@import "../../styles/common/colors";
+@import "../../styles/common/config";
+@import "../../styles/common/house_styles";
+@import "../../styles/common/resets";
+@import "../../styles/common/responsive_sizes";
+
+
+.navbar {
+    position: absolute;
+    background: $color-metal;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar__inner {
+    display: flex;
+    width: 100%;
+    max-width: $desktop-width-normal;
+    height: $navbar-height;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.navbar__main {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-basis: 100%;
+    color: $color-white;
+}
+
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin: 0 auto;
+
+    @media #{$screen-desktop} {
+        margin: 0;
+    }
+}
+
+.navbar__logo-link {
+    @include style-link();
+    color: $color-white;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.8rem;
+
+    @media #{$screen-tablet} {
+        font-size: 1rem;
+    }
+}
+
+.navbar__logo {
+    height: 40px;
+    margin: 0 20px;
+
+    @media #{$screen-desktop} {
+        margin-left: 0;
+    }
+}
+
+.navbar__burger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: $color-white;
+    cursor: pointer;
+    display: block;
+    width: $navbar-height;
+    background-color: transparent;
+
+    @media #{$screen-desktop} {
+        display: none;
+    }
+
+    span {
+        background-color: currentColor;
+        display: block;
+        height: 2px;
+        left: calc(50% - 8px);
+        position: absolute;
+        transform-origin: center;
+        transition-duration: 100ms;
+        transition-property: background-color,opacity;
+        transition-property: background-color,opacity,transform;
+        transition-property: background-color,opacity,transform;
+        transition-timing-function: ease-out;
+        width: 16px;
+
+        &:nth-child(1) {
+            top: calc(50% - 6px);
+        }
+        &:nth-child(2) {
+            top: calc(50% - 1px);
+        }
+        &:nth-child(3) {
+            top: calc(50% + 4px);
+        }
+    }
+
+    &--active {
+        span {
+            &:nth-child(1) {
+                transform: translateY(5px) rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: translateY(-5px) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.navbar__menu-wrapper {
+    position: absolute;
+    top: $navbar-height + 15px;
+    right: 0;
+    width: auto;
+    padding: 10px 0 10px 10px;
+    overflow: hidden;
+
+    @media #{$screen-desktop} {
+        display: flex;
+        position: static;
+        height: auto;
+        width: auto;
+        overflow: visible;
+    }
+}
+
+.navbar__menu {
+    @include list-reset();
+    position: relative;
+    right: 0;
+    top: 5px;
+    width: 300px;
+    box-sizing: border-box;
+    padding: 20px 20px;
+    background-color: $color-frosted-white;
+    transition-property: transform, box-shadow;
+    transition-duration: 500ms;
+    box-shadow: 0 0 10px rgba(100, 100, 100, 0.6);
+    z-index: 100;
+    transform: translateX(0);
+
+    &--inactive {
+        box-shadow: none;
+        transform: translateX(300px);
+    }
+
+    @media #{$screen-desktop} {
+        position: static;
+        padding: 0;
+        display: inline-flex;
+        box-shadow: none;
+        color: $color-white;
+        background-color: unset;
+        width: auto;
+
+        &--inactive {
+            transform: translateX(0);
+        }
+    }
+}
+
+.navbar__item {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+
+    @media #{$screen-desktop} {
+        justify-content: center;
+    }
+
+    &--sidebar-only{
+        @media #{$screen-desktop} {
+            display: none;
+        }
+    }
+}
+
+.navbar__link {
+    @include style-link();
+    white-space: nowrap;
+    padding: 6px 0;
+    margin: 16px 10px;
+    box-sizing: border-box;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        margin: 0 auto;
+        background-color: transparent;
+    }
+
+    &--active {
+        &::after {
+            width: 100%;
+            background-color: $color-mine;
+        }
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+            transition: width 0.5s, background-color 1s;
+            background-color: $color-mine;
+        }
+    }
+
+    @media #{$screen-desktop} {
+        padding: 3px 0;
+        margin: 0 10px;
+        font-size: 1.25rem;
+        font-weight: $font-weight-bold;
+
+        &--active {
+            &::after {
+                background-color: $color-white;
+            }
+        }
+
+        &:hover {
+            &::after {
+                background-color: $color-white;
+            }
+        }
+    }
+}
+
+
+.navbar__cta {
+    /*
+    Considering for use on contact button
+    */
+    @include style-link();
+    white-space: nowrap;
+    padding: 6px 0;
+    margin: 20px 10px;
+    box-sizing: border-box;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        margin: 0 auto;
+        background-color: transparent;
+        box-sizing: border-box;
+    }
+
+    &--active {
+        &::after {
+            width: 100%;
+            background-color: $color-mine;
+        }
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+            transition: width 0.5s, background-color 1s;
+            background-color: $color-mine;
+        }
+    }
+
+    @media #{$screen-desktop} {
+        padding: 6px 15px;
+        margin: 0 10px;
+        font-size: 1.25rem;
+        font-weight: $font-weight-bold;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            width: 0;
+            z-index: -1;
+        }
+
+         &::after {
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border: solid 2px $color-white;
+        }
+
+        &--active {
+            &::after {
+                border-width: 3px;
+                background-color: inherit;
+            }
+        }
+
+        &:hover {
+            color: $color-mine;
+            transition: color 1s;
+
+            &::before {
+                width: 100%;
+                background-color: $color-white;
+                transition: width 0.5s, background-color 0.5s;
+            }
+            &::after {
+                border-width: 3px;
+                background-color: inherit;
+            }
+        }
+    }
+
+
+}

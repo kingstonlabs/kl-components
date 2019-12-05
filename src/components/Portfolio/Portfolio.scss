@@ -1,0 +1,29 @@
+@import "../../styles/common/colors";
+@import "../../styles/common/responsive_sizes";
+
+
+.portfolio {
+    width: 100%;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+
+    @media #{$screen-desktop} {
+        padding: 60px 0;
+    }
+}
+
+.portfolio__header {
+    margin: 0 auto;
+    max-width: $desktop-width-normal;
+}
+
+.portfolio__content {
+    margin: 0 auto;
+    max-width: $desktop-width-normal;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 0 10px;
+    box-sizing: border-box;
+}

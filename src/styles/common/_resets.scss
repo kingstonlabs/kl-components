@@ -1,0 +1,35 @@
+@mixin button-reset() {
+    // Reset button styles
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+    text-transform: inherit;
+    overflow: visible;
+    cursor: pointer;
+
+    // Remove outline for aesthetic reasons, although this is considered
+    // an accessibility feature
+    &:focus, &:active {
+        outline: 0;
+    }
+    &::-moz-focus-inner {
+        border: initial;
+    }
+
+    &:disabled {
+        cursor: auto;
+    }
+}
+
+
+@mixin link-reset() {
+    text-decoration: none;
+    text-transform: none;
+    outline: 0;
+    color: inherit;
+}

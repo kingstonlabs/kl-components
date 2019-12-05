@@ -1,0 +1,95 @@
+@import "../../styles/common/config";
+@import "../../styles/common/house_styles";
+@import "../../styles/common/colors";
+
+
+.section {
+    position: relative;
+    width: 100%;
+}
+
+@mixin section-bg-image($background-position-x: center, $background-position-y: center) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $color-mine;
+    background-size: cover;
+    background-position-y: $background-position-y;
+    background-position-x: $background-position-x;
+    color: $color-white;
+    border-color: $color-white;
+    text-shadow: $color-medium-shadow 0 0 0.5em;
+
+    @media print {
+        text-shadow: none;
+    }
+}
+
+@mixin section-title($background-position-x: center, $background-position-y: center) {
+    @include section-bg-image($background-position-x, $background-position-y);
+    // Full viewport height minus the header and extra border
+    min-height: calc(100vh - #{$navbar-height});
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media print {
+        height: auto;
+    }
+}
+
+.section--title {
+    @include section-title($background-position-x: left);
+}
+
+.section--bg-image {
+    @include section-bg-image();
+}
+
+
+.section--side-figure {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+
+    @media #{$screen-desktop} {
+        flex-direction: row;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    > * {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @media #{$screen-desktop} {
+            align-items: flex-end;
+            width: 50%;
+        }
+    }
+
+    &:nth-child(even) > * {
+        @media #{$screen-desktop} {
+            align-items: flex-start;
+        }
+    }
+}
+
+.section--shaded {
+    background-color: $color-gallery;
+}
+
+.section__content {
+    margin: 40px auto;
+    max-width: $desktop-width-normal;
+    height: 100%;
+    width: 100%;
+}
+
+.section__content--text {
+    max-width: 800px;
+}

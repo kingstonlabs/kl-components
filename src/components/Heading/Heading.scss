@@ -1,0 +1,54 @@
+@import "../../styles/common/colors";
+@import "../../styles/common/house_styles";
+@import "../../styles/common/responsive_sizes";
+
+
+
+.heading {
+    display: block;
+    margin: 0.5em 0;
+}
+
+.heading--hero {
+    @include style-h-hero();
+}
+
+.heading--hero-byline {
+    @include style-h-hero-byline();
+}
+
+.heading--hero-date {
+    @include style-h-hero-date();
+}
+
+.heading--leader {
+    @include style-h-leader();
+    //color: $color-cerulean;
+}
+
+.heading--date {
+    @include style-h-date();
+}
+
+.heading--major {
+    @include style-h-major();
+    //color: $color-cerulean;
+}
+
+.heading--minor {
+    @include style-h-minor();
+    //color: $color-cerulean;
+}
+
+.heading--lower-minor {
+    @include style-h-lower-minor();
+    //color: $color-cerulean;
+}
+
+.heading--no-margin {
+    margin: 0;
+}
+
+.heading--centred {
+    text-align: center;
+}

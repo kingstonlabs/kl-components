@@ -1,0 +1,87 @@
+@import "../../styles/common/colors";
+@import "../../styles/common/house_styles";
+@import "../../styles/common/responsive_sizes";
+@import "../../styles/common/typography";
+
+
+.quote {
+    width: 100%;
+    background-color: $color-cerulean;
+    color: $color-white;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+
+    @media #{$screen-tablet} {
+        padding: 20px 0;
+    }
+
+    @media #{$screen-tablet} {
+        padding: 40px 0;
+    }
+}
+
+.quote--pink {
+    background-color: $color-rose;
+}
+
+.quote--turquoise {
+
+}
+
+.quote__content {
+    @include style-quote();
+    margin: 0 auto;
+    max-width: $desktop-width-normal;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.quote__text {
+    box-sizing: border-box;
+    margin: 20px 0;
+    padding: 4rem 30px 1rem;
+
+    @media #{$screen-tablet} {
+        margin: 30px 40px;
+    }
+
+    p {
+        position: relative;
+
+        &:first-child::before{
+            content: "\"";
+            display: inline;
+            margin-right: 0.1em;
+        }
+
+        &:last-of-type::after{
+            content: "\"";
+            display: inline;
+            margin-left: 0.1em;
+        }
+
+    }
+}
+
+.quote__citation {
+    @include style-body();
+    display: inline-block;
+    width: 100%;
+    margin-top: 2em;
+    font-weight: $font-weight-bold;
+    font-size: 18px;
+    text-align: right;
+
+    @media #{$screen-tablet} {
+        font-size: 20px;
+    }
+
+    @media #{$screen-desktop} {
+        font-size: 24px;
+    }
+}

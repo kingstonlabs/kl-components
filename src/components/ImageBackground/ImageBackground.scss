@@ -1,0 +1,17 @@
+@import "../../styles/common/colors";
+@import "../../styles/common/responsive_sizes";
+
+
+.image-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-mine;
+    z-index: -1;
+
+    .gatsby-image-wrapper {
+        height: 100%;
+    }
+}

@@ -1,0 +1,17 @@
+@import "../../styles/common/house_styles";
+
+
+.paragraph {
+    @include style-body();
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+.paragraph--smallprint {
+    @include style-smallprint();
+}
+
+.paragraph--centred {
+    text-align: center;
+}
